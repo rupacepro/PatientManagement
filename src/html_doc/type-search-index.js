@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"controller","l":"Controller"},{"p":"dao","l":"DAORunner"},{"p":"model","l":"Patient"},{"p":"dao","l":"PatientDAO"},{"p":"view","l":"userMenu"}];updateSearchResults();

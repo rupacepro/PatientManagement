@@ -1,21 +1,31 @@
 package view;
 
 import java.util.Scanner;
-
 import controller.Controller;
 
+/**
+ * The userMenu class provides a menu interface for interacting with the Patient Information System.
+ */
 public class userMenu {
-	public static void main(String[] args) {
-//		Object of Controller
-		
-		Controller ctrl = new Controller();
-		
-		Scanner sc = new Scanner(System.in);
-		
-		int entry = 0;
-		
-		System.out.println("\n\nWelcome to the Patient Information System");
-		do {
+    /**
+     * Main method to start the application.
+     * 
+     * @param args Command-line arguments (not used).
+     */
+    public static void main(String[] args) {
+        // Create an instance of the Controller class
+        Controller ctrl = new Controller();
+        
+        // Create a Scanner object for user input
+        Scanner sc = new Scanner(System.in);
+        
+        int entry = 0;
+        
+        // Display welcome message
+        System.out.println("\n\nWelcome to the Patient Information System");
+        
+        // Display menu and prompt user for input
+        do {
             System.out.println("-----------------------------------------");
             System.out.println("Enter 1 to display all Records.");
             System.out.println("Enter 2 to Insert Record");
@@ -24,10 +34,12 @@ public class userMenu {
             System.out.println("Enter 5 to update a record by Id !!!");
             System.out.println("Enter 6 to Exit the application !!!");
             System.out.print("Please Type your Entry: a number from 1 to 6 only: ");
-
+            
+            // Read user input
             entry = sc.nextInt();
-
-            switch(entry) {
+            
+            // Perform action based on user input
+            switch (entry) {
                 case 1: {
                     ctrl.displayAll();
                     break;
@@ -50,6 +62,7 @@ public class userMenu {
                 }
                 case 6: {
                     System.out.println("Exiting the application...");
+                    System.exit(0);
                     break;
                 }
                 default: {
@@ -57,6 +70,8 @@ public class userMenu {
                 }
             }
         } while (entry != 6);
-		
-	}
+        
+        // Close the Scanner object
+        sc.close();
+    }
 }
